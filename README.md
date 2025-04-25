@@ -279,3 +279,69 @@ chmod +x metasploit.sh
 pkg install aircrack-ng
 Для более подробного и структурированного справочника по командам Termux вы можете ознакомиться с Termux Command Handbook 
 ```
+
+---
+
+
+## Установка и запуск веб-сервера в Termux
+### Python
+
+Установи Python:
+
+```bash
+pkg install python
+```
+
+Перейди в директорию, где лежат HTML-файлы:
+```bash
+cd /data/data/com.termux/files/home/my-site
+```
+
+Запусти сервер (Python 3):
+```bash
+python -m http.server 8080
+```
+
+Теперь открой в браузере на телефоне или другом устройстве:
+```cpp
+http://<ip_устройства>:8080
+```
+
+Узнать IP:
+```bash
+ip a
+```
+
+### Apache2:
+
+Установи Apache:
+```bash
+pkg install apache2
+```
+
+Запусти сервер:
+```bash
+apachectl start
+```
+
+Открой в браузере:
+```arduino
+http://localhost:8080
+```
+
+HTML-файлы можно кидать сюда:
+```swift
+/data/data/com.termux/files/usr/share/apache2/default-site/htdocs/
+```
+
+### PHP-сервер
+
+Установи PHP:
+```bash
+pkg install php
+```
+
+Запусти в нужной папке:
+```bash
+php -S 0.0.0.0:8080
+```
